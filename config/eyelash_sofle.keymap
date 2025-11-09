@@ -40,6 +40,18 @@
     behaviors {
     };
 
+    macros {
+        change_layout_and_language: change_layout_and_language {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_press &tog 4 &kp LSHIFT>,
+                <&macro_tap &kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_release &tog 4 &kp LSHIFT>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
